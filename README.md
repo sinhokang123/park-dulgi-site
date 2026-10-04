@@ -1,6 +1,6 @@
 # park-dulgi-site
 
-Public support / privacy site for **박둘기: 과적 배달왕** (Pigeon Overload, `com.parkdulgi.delivery`), served by GitHub
+Public support / privacy site for **박둘기: 과적 배달왕** (Pigeon Overload; iOS `com.parkdulgi.delivery`, Android `com.aboutus.parkdulgi`), served by GitHub
 Pages from the `docs/` folder of `main` at https://sinhokang123.github.io/park-dulgi-site/. Only `docs/` is published;
 templates, tooling and config stay out of the site.
 

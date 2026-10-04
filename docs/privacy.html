@@ -39,16 +39,17 @@
 
 <h2 id="summary-ko">1. 요약</h2>
 <ul>
-  <li>게임에는 회원가입이나 로그인이 없습니다. 운영자는 이름, 이메일, 전화번호를 받지 않습니다.</li>
+  <li>게임에는 회원가입이나 로그인이 없습니다. 게임은 이름, 이메일, 전화번호를 묻지 않습니다(이메일로 문의하시는 경우는 6항 참고).</li>
   <li>게임 진행 상황은 <strong>기기 안에만</strong> 저장되며 운영자에게 전송되지 않습니다. 운영자는 게임 서버를 운영하지 않습니다.</li>
-  <li>광고(Google AdMob)와 인앱 결제 처리(RevenueCat) 과정에서 아래 3항의 정보가 해당 서비스 제공자에게 전송됩니다. 게임은 이 밖의 이용 통계·오류 보고 도구를 사용하지 않습니다.</li>
+  <li>광고(Google AdMob)를 위해 아래 3항의 정보가 Google에 전송됩니다. 게임은 이 밖의 이용 통계·오류 보고 도구를 사용하지 않습니다.</li>
+  <li>인앱 결제는 Apple(App Store)과 Google(Google Play)이 직접 처리합니다. 운영자는 결제 서버를 운영하지 않으며 카드 번호 등 결제 수단 정보를 받지 않습니다(3항 참고).</li>
 </ul>
 
 <h2 id="on-device-ko">2. 기기에만 저장되는 정보</h2>
 <p>게임 진행(레벨, 별, 코인·모이 잔액, 차량·꾸미기, 미션, 설정, 처리한 결제의 거래 번호 등)은 앱 전용 저장 공간에 저장됩니다. 이 정보는 기기 밖으로 전송되지 않으며, 앱을 삭제하면 함께 삭제될 수 있습니다. 기기의 백업 기능(iCloud, Google 백업 등)이 이 정보를 백업할 수 있으며, 이는 각 기기 제조사·OS 정책을 따릅니다.</p>
 
-<h2 id="transfer-ko">3. 개인정보의 국외 이전 (처리위탁·제3자 제공)</h2>
-<p>게임은 광고와 인앱 결제를 위해 아래 사업자에게 정보를 전송하며, 받는 자는 모두 미국에 있습니다. 전송 시점은 아래 표와 같으며(일부는 앱을 실행할 때마다 이루어집니다), 모두 암호화된 네트워크(HTTPS)로 전송됩니다. "처리위탁"은 운영자를 대신해 처리하는 경우, "제3자 제공"은 받는 자가 자신의 목적으로도 이용하는 경우입니다.</p>
+<h2 id="transfer-ko">3. 개인정보의 국외 이전 (제3자 제공)</h2>
+<p>게임은 광고를 위해 아래 사업자에게 정보를 전송하며, 받는 자는 미국에 있습니다. 전송 시점은 아래 표와 같으며(일부는 앱을 실행할 때마다 이루어집니다), 모두 암호화된 네트워크(HTTPS)로 전송됩니다. "제3자 제공"은 받는 자가 자신의 목적으로도 이용하는 경우입니다.</p>
 <div class="table-wrap">
 <table>
   <thead><tr><th>받는 자 · 연락처 (국가)</th><th>구분</th><th>목적</th><th>항목</th><th>시점·방법</th><th>보유·이용 기간</th></tr></thead>
@@ -61,20 +62,13 @@
       <td data-label="시점·방법">앱을 실행하거나 다시 열 때(동의 상태 확인, 광고가 허용된 경우 광고 SDK 초기화와 광고 미리 불러오기), 광고를 요청하거나 표시할 때, 동의 화면을 띄울 때 / 암호화된 네트워크 전송</td>
       <td data-label="보유·이용 기간">Google 데이터 보존 정책에 따름. Google은 광고 서버 로그의 IP 주소 일부를 9개월 후, 쿠키 정보를 18개월 후 삭제해 익명화한다고 공개하고 있습니다.</td>
     </tr>
-    <tr>
-      <td data-label="받는 자 · 연락처 (국가)">RevenueCat, Inc.<br>1032 E Brandon Blvd #3003, Brandon, FL 33511, USA · <a href="mailto:compliance@revenuecat.com">compliance@revenuecat.com</a> (미국)</td>
-      <td data-label="구분">처리위탁</td>
-      <td data-label="목적">인앱 결제 검증, 구매 복원, 구매 상태 관리, 구매 현황 집계(매출 통계)</td>
-      <td data-label="항목">기기에서 무작위로 생성한 익명 사용자 ID, 구매 영수증·거래 정보(상품 ID, 가격·통화, 구매 일시, 스토어 거래 번호), 기기·OS·앱 버전, IP 주소</td>
-      <td data-label="시점·방법">앱을 실행할 때(익명 ID로 구매 상태 확인), 상점에서 상품 정보를 불러오거나 구매·복원할 때 / 암호화된 네트워크 전송</td>
-      <td data-label="보유·이용 기간">운영자의 RevenueCat 이용 기간 동안. 운영자가 삭제를 요청하거나 이용을 끝내면 RevenueCat의 보존 정책에 따라 파기합니다(법령상 보관 의무가 있으면 그 기간).</td>
-    </tr>
   </tbody>
 </table>
 </div>
-<p><strong>국외 이전을 거부하는 방법과 그 효과:</strong> 맞춤형 광고와 광고 식별자 전송은 4항의 방법으로 거부할 수 있으며, 거부해도 게임과 광고 보상은 똑같이 이용할 수 있습니다. 광고를 불러오고 표시하는 데 필요한 기기·네트워크 정보는 앱을 실행하는 동안 전송됩니다. 구매 영수증·거래 정보는 구매하거나 복원할 때만 전송되지만, 구매 상태 확인을 위한 익명 사용자 ID와 기기·OS·앱 버전 정보는 앱을 실행할 때마다 RevenueCat에 전송됩니다. 이것까지 원하지 않으시면 게임 이용을 중단하고 앱을 삭제해 주세요. 게임은 결제 없이 이용할 수 있습니다.</p>
-<p>결제 자체는 이용자와 Apple Inc.(App Store) 또는 Google LLC(Google Play) 사이에서 각 스토어의 정책에 따라 이루어지며, 운영자는 카드 번호 등 결제 수단 정보를 받지 않습니다.</p>
-<p>각 서비스의 개인정보 처리에 대해서는 <a href="https://policies.google.com/privacy">Google 개인정보처리방침</a>, <a href="https://policies.google.com/technologies/partner-sites">Google이 파트너 앱의 정보를 사용하는 방식</a>, <a href="https://www.revenuecat.com/privacy">RevenueCat 개인정보처리방침</a>을 참고하세요.</p>
+<p><strong>국외 이전을 거부하는 방법과 그 효과:</strong> 맞춤형 광고와 광고 식별자 전송은 4항의 방법으로 거부할 수 있으며, 거부해도 게임과 광고 보상은 똑같이 이용할 수 있습니다. 광고를 불러오고 표시하는 데 필요한 기기·네트워크 정보는 앱을 실행하는 동안 전송되므로, 이것까지 원하지 않으시면 게임 이용을 중단하고 앱을 삭제해 주세요.</p>
+<p>Google의 개인정보 처리에 대해서는 <a href="https://policies.google.com/privacy?hl=ko">Google 개인정보처리방침</a>, <a href="https://policies.google.com/technologies/partner-sites?hl=ko">Google이 파트너 앱의 정보를 사용하는 방식</a>을 참고하세요.</p>
+<p id="payments-ko"><strong>인앱 결제(Apple · Google):</strong> 인앱 결제는 이용자가 자신의 Apple 계정(App Store) 또는 Google 계정(Google Play)으로 각 스토어에서 진행합니다. 결제, 구매 내역 관리, 환불은 Apple과 Google이 독립된 스토어 사업자로서 각자의 이용약관과 개인정보처리방침(<a href="https://www.apple.com/kr/legal/privacy/">Apple 개인정보 처리방침</a>, <a href="https://policies.google.com/privacy?hl=ko">Google 개인정보처리방침</a>)에 따라 처리합니다. 게임은 고른 상품을 기기의 스토어 기능(iOS의 StoreKit, Android의 Google Play 결제 시스템)에 넘기고 구매 내역을 기기 안에서 확인할 뿐이며, 스토어 외에 운영자나 다른 회사로 결제 정보를 보내지 않습니다. 운영자는 결제 서버를 운영하지 않으며 카드 번호 등 결제 수단 정보를 받지 않습니다.</p>
+<p>운영자는 App Store Connect와 Google Play Console에서 각 스토어가 개발자에게 제공하는 범위의 거래 정보(예: 주문 번호, 상품, 구매 일시, 금액, 국가)와 판매 집계 보고서를 볼 수 있으며, 이를 구매 문의·환불 대응과 매출 확인에만 이용합니다. 이 정보는 Apple과 Google의 시스템에 각자의 정책에 따라 보관됩니다.</p>
 
 <h2 id="ads-ko">4. 맞춤형 광고(행태정보)와 선택권</h2>
 <p>추적을 허용하거나 맞춤 광고에 동의한 경우, Google은 광고 노출·클릭 기록 같은 이용 행태 정보를 광고 식별자와 함께 이용해 관심사에 맞는 광고를 보여 줄 수 있습니다. 아래 방법으로 언제든지 거부하거나 바꿀 수 있습니다.</p>
@@ -92,10 +86,12 @@
 </ul>
 
 <h2 id="retention-ko">6. 보유 기간과 파기</h2>
-<p>기기에 저장된 정보는 앱을 삭제하거나 기기에서 앱 데이터를 지울 때까지 보관됩니다. 외부 서비스로 전송된 정보는 3항의 보유 기간에 따릅니다. RevenueCat에 저장된 구매 기록의 삭제를 원하시면 게임 <strong>설정 › 구매 · 지원 › 문의용 ID</strong>(또는 스토어 영수증의 주문 번호)와 함께 아래 연락처로 요청하세요. 운영자는 지체 없이 RevenueCat에서 해당 기록을 삭제하며, 삭제된 기록은 복구할 수 없습니다.</p>
+<p>기기에 저장된 정보는 앱을 삭제하거나 기기에서 앱 데이터를 지울 때까지 보관됩니다. Google에 전송된 광고 관련 정보는 3항의 보유 기간에 따릅니다.</p>
+<p>결제 내역은 Apple과 Google이 각자의 정책에 따라 보관하며, 운영자는 구매 기록을 별도의 서버에 보관하지 않습니다. 결제 내역의 사본이나 삭제는 <a href="https://privacy.apple.com">Apple 데이터 및 개인정보 보호</a> 또는 <a href="https://myaccount.google.com/">Google 계정</a>에서 요청할 수 있습니다(Apple과 Google에서는 계정 자체를 삭제해야만 결제 내역이 삭제될 수 있습니다).</p>
+<p>이메일로 문의하시면 운영자는 답변을 위해 이메일 주소, 문의 내용, 보내 주신 정보(주문 번호, 기기 모델 등)를 받습니다. 이 정보는 문의에 답하는 데에만 이용하고, 처리가 끝나면 지체 없이 파기합니다. 다만 관계 법령에 따라 보관해야 하는 경우에는 그 기간 동안 보관합니다.</p>
 
 <h2 id="rights-ko">7. 이용자의 권리와 행사 방법</h2>
-<p>이용자(법정대리인이나 위임받은 대리인 포함)는 개인정보 열람, 정정, 삭제, 처리 정지를 요구할 수 있습니다. 운영자는 이름·연락처 등 이용자를 식별할 수 있는 정보를 보관하지 않으므로, 요청 시 게임 설정의 "문의용 ID"(결제한 적이 있다면 스토어 영수증의 주문 번호도)를 함께 이메일로 알려 주세요. 운영자는 지체 없이 처리하고 결과를 알려 드립니다. 광고 관련 정보는 4항의 방법으로 직접 제어할 수 있습니다.</p>
+<p>이용자(법정대리인이나 위임받은 대리인 포함)는 개인정보 열람, 정정, 삭제, 처리 정지를 요구할 수 있습니다. 아래 이메일로 요청해 주시면 운영자는 지체 없이 처리하고 결과를 알려 드립니다. 운영자는 이용자가 보낸 문의 메일 외에는 게임 이용자의 이름·연락처를 보관하지 않으므로, 결제와 관련된 요청이라면 스토어 영수증의 주문 번호를 함께 알려 주세요. 광고 관련 정보는 4항, 결제 내역은 6항의 방법으로 직접 제어하거나 요청할 수 있습니다.</p>
 
 <h2 id="children-ko">8. 아동의 개인정보</h2>
 <p>게임은 일반 이용자를 대상으로 하며 아동을 주 대상으로 하지 않습니다. 운영자는 아동의 개인정보를 알면서 수집하지 않습니다. 보호자께서 문의가 있으시면 아래 연락처로 알려 주세요.</p>
@@ -120,16 +116,17 @@
 
 <h2 id="summary-en">1. Summary</h2>
 <ul>
-  <li>The Game has no sign-up or login. We do not ask for your name, email address or phone number.</li>
+  <li>The Game has no sign-up or login. The Game does not ask for your name, email address or phone number (if you email us, see section 6).</li>
   <li>Your game progress is stored <strong>only on your device</strong> and is never sent to us. We do not run game servers.</li>
-  <li>To show ads (Google AdMob) and to process in-app purchases (RevenueCat), the information described in section 3 is sent to those service providers. The Game uses no other analytics or crash-reporting tools.</li>
+  <li>To show ads (Google AdMob), the information described in section 3 is sent to Google. The Game uses no other analytics or crash-reporting tools.</li>
+  <li>In-app purchases are processed directly by Apple (App Store) and Google (Google Play). We run no payment server and never receive your card number or other payment details (see section 3).</li>
 </ul>
 
 <h2 id="on-device-en">2. Information that stays on your device</h2>
 <p>Game progress (levels, stars, coin and Seed balances, vehicles and cosmetics, missions, settings, and the transaction IDs of purchases already processed) is stored in the app's private storage. It is not transmitted off your device and may be deleted when you delete the app. Your device's own backup service (such as iCloud or Google backup) may back it up under that service's terms.</p>
 
-<h2 id="transfer-en">3. Information sent to service providers (international transfers)</h2>
-<p>To show ads and process in-app purchases, the Game sends information to the companies below, all located in the United States. The table shows when each transfer happens (some happen every time the app starts); all are encrypted in transit (HTTPS). A "processor" handles data on our behalf; an "independent controller" also uses it for its own purposes.</p>
+<h2 id="transfer-en">3. Information shared with third parties (international transfers)</h2>
+<p>To show ads, the Game sends information to the company below, located in the United States. The table shows when transfers happen (some happen every time the app starts); all are encrypted in transit (HTTPS). An "independent controller" also uses the data for its own purposes.</p>
 <div class="table-wrap">
 <table>
   <thead><tr><th>Recipient · contact (country)</th><th>Role</th><th>Purpose</th><th>Data</th><th>When / how</th><th>Retention</th></tr></thead>
@@ -142,20 +139,13 @@
       <td data-label="When / how">When the app starts or returns to the foreground (consent status check and, where ads are allowed, ad SDK start-up and ad preloading), when an ad is requested or shown, or when a consent form is displayed / encrypted network transfer</td>
       <td data-label="Retention">Under Google's retention policy. Google states that it anonymizes advertising data in server logs by removing part of the IP address after 9 months and cookie information after 18 months.</td>
     </tr>
-    <tr>
-      <td data-label="Recipient · contact (country)">RevenueCat, Inc.<br>1032 E Brandon Blvd #3003, Brandon, FL 33511, USA · <a href="mailto:compliance@revenuecat.com">compliance@revenuecat.com</a> (USA)</td>
-      <td data-label="Role">Processor</td>
-      <td data-label="Purpose">Validating in-app purchases, restoring purchases, keeping purchase status, aggregate purchase reporting</td>
-      <td data-label="Data">A random anonymous user ID created on your device, purchase receipts and transaction data (product ID, price and currency, purchase time, store transaction ID), device/OS/app version, IP address</td>
-      <td data-label="When / how">Each time the app starts (to check purchase status with the anonymous ID), and when the shop loads products or you buy or restore / encrypted network transfer</td>
-      <td data-label="Retention">For as long as we use RevenueCat. When we request deletion or stop using the service, RevenueCat deletes it under its retention policy (longer only where the law requires).</td>
-    </tr>
   </tbody>
 </table>
 </div>
-<p><strong>How to refuse these transfers, and what happens:</strong> you can refuse personalized ads and the advertising identifier as described in section 4, and the Game and its ad rewards work the same. Device and network information needed to load and show ads is sent while the app is running. Purchase receipts and transaction data are sent only when you buy or restore, but the anonymous user ID and device/OS/app version are sent to RevenueCat each time the app starts so it can check your purchase status. If you do not want that either, please stop using the Game and delete the app. The Game can be played without buying anything.</p>
-<p>Payments themselves take place between you and Apple Inc. (App Store) or Google LLC (Google Play) under each store's policy. We never receive your card number or other payment details.</p>
-<p>See <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>, <a href="https://policies.google.com/technologies/partner-sites">how Google uses information from apps that use its services</a>, and <a href="https://www.revenuecat.com/privacy">RevenueCat's Privacy Policy</a>.</p>
+<p><strong>How to refuse these transfers, and what happens:</strong> you can refuse personalized ads and the advertising identifier as described in section 4, and the Game and its ad rewards work the same. Device and network information needed to load and show ads is sent while the app is running; if you do not want that either, please stop using the Game and delete the app.</p>
+<p>See <a href="https://policies.google.com/privacy">Google's Privacy Policy</a> and <a href="https://policies.google.com/technologies/partner-sites">how Google uses information from apps that use its services</a>.</p>
+<p id="payments-en"><strong>In-app purchases (Apple and Google):</strong> purchases are made with your own Apple account in the App Store or Google account in Google Play. Payment, purchase history and refunds are handled by Apple and Google as independent store operators under their own terms and privacy policies (<a href="https://www.apple.com/legal/privacy/">Apple Privacy Policy</a>, <a href="https://policies.google.com/privacy">Google Privacy Policy</a>). The Game only hands the item you choose to your device's store system (StoreKit on iOS, Google Play's billing system on Android) and checks your purchases on the device; it sends no payment information to us or to any company other than the store. We run no payment server and never receive your card number or other payment details.</p>
+<p>In App Store Connect and Google Play Console we can see the transaction information each store makes available to developers (for example order number, product, purchase date, price and country) and aggregate sales reports. We use it only to answer purchase questions, handle refunds and reconcile sales; it is kept in Apple's and Google's systems under their own policies.</p>
 
 <h2 id="ads-en">4. Personalized ads and your choices</h2>
 <p>If you allow tracking or consent to personalized ads, Google may use activity such as ad impressions and clicks together with your advertising identifier to show ads based on your interests. You can refuse or change this at any time:</p>
@@ -173,16 +163,18 @@
 </ul>
 
 <h2 id="retention-en">6. Retention and deletion</h2>
-<p>On-device data is kept until you delete the app or clear its data. Data sent to service providers is kept for the periods in section 3. To have your purchase records at RevenueCat deleted, email us the <strong>Support ID</strong> shown in the Game under <strong>Settings › Purchases &amp; Support</strong> (or the order number from your store receipt). We will delete them at RevenueCat without undue delay; deleted records cannot be recovered.</p>
+<p>On-device data is kept until you delete the app or clear its data. Ad-related data sent to Google is kept for the periods in section 3.</p>
+<p>Purchase history is kept by Apple and Google under their own policies; we keep no purchase records on any server of our own. To get a copy of it or ask for it to be deleted, use <a href="https://privacy.apple.com">Apple's Data and Privacy page</a> or your <a href="https://myaccount.google.com/">Google Account</a> (Apple and Google may only delete it by deleting your account).</p>
+<p>If you email us, we receive your email address, your message and anything you include (such as an order number or device model). We use it only to answer you and delete it without undue delay once your request is resolved, unless the law requires us to keep it longer.</p>
 
 <h2 id="rights-en">7. Your rights</h2>
-<p>Depending on where you live, you (or a legal guardian or authorized agent) may have the right to access, correct, delete or restrict the processing of your personal information. Because we do not hold your name or contact details, please include the "Support ID" from the Game's settings (and, if you bought something, the order number from your store receipt) with any request by email. We will respond without undue delay. You can control ad-related data directly as described in section 4.</p>
+<p>Depending on where you live, you (or a legal guardian or authorized agent) may have the right to access, correct, delete or restrict the processing of your personal information. Email us at the address below and we will respond without undue delay. Apart from emails you send us, we hold no names or contact details for players, so please include the order number from your store receipt if your request concerns a purchase. You can control ad-related data directly as described in section 4, and purchase history as described in section 6.</p>
 
 <h2 id="children-en">8. Children</h2>
 <p>The Game is intended for a general audience and is not directed primarily at children. We do not knowingly collect personal information from children. Parents or guardians with questions can contact us at the address below.</p>
 
 <h2 id="security-en">9. Security</h2>
-<p>Communication with service providers is encrypted in transit (HTTPS). On-device data is kept in the app's private storage provided by the operating system.</p>
+<p>Communication with external services is encrypted in transit (HTTPS). On-device data is kept in the app's private storage provided by the operating system.</p>
 
 <h2 id="website-en">10. This website</h2>
 <p>This site is served by GitHub Pages, a service of GitHub, Inc. GitHub may process visitors' IP addresses and other access logs for security and to run the service (<a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">GitHub's privacy statement</a>). This site uses no cookies, analytics or third-party fonts; it only remembers your language choice in your browser's storage.</p>

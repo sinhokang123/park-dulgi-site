@@ -1,9 +1,11 @@
 <!doctype html>
 <!--
-  TEMPLATE: edit this file, then run `node fill.mjs` to regenerate ../support.html. Comments are stripped from output.
-  Source: park-dulgi docs/store/support.html. Labels follow the shipped strings: Settings › 구매 · 지원 / Purchases &
-  Support › 문의용 ID / Support ID, 구매 복원 / Restore Purchases, 광고 개인정보 설정 / Ad Privacy Choices,
-  자동 적재 / Auto-Load. Keep in sync if those strings change (src/i18n/strings/common.js, settings.js).
+  TEMPLATE: edit this file, then run `node fill.mjs` to regenerate docs/support.html. Comments are stripped from output.
+  Mirrored (standalone, same text) in park-dulgi docs/store/support.html. Purchases go straight to Apple StoreKit 2 /
+  Google Play Billing on the device (no RevenueCat, no purchase server), so purchase and refund help asks for the store
+  order number; the in-game Support ID is deliberately not referenced. Labels follow the shipped strings:
+  구매 복원 / Restore Purchases, 광고 개인정보 설정 / Ad Privacy Choices, 자동 적재 / Auto-Load. Keep in sync if those
+  strings change (src/i18n/strings/common.js, settings.js).
 -->
 <html lang="ko" data-title-ko="고객 지원 — {{APP_NAME_KO}}" data-title-en="Support — {{APP_NAME_EN}}">
 <head>
@@ -44,7 +46,7 @@
 <p class="meta">{{APP_NAME_KO}}</p>
 <div class="callout">
   <p><strong>문의 이메일: <a href="mailto:{{CONTACT_EMAIL}}?subject=%5B%EB%B0%95%EB%91%98%EA%B8%B0%5D%20%EB%AC%B8%EC%9D%98">{{CONTACT_EMAIL}}</a></strong></p>
-  <p>빠른 답변을 위해 게임 <strong>설정 › 구매 · 지원 › 문의용 ID</strong>, 기기 모델, OS 버전, 게임 버전(설정 맨 아래), 그리고 결제 문의라면 스토어 영수증의 주문 번호를 함께 적어 주세요.</p>
+  <p>빠른 답변을 위해 기기 모델, OS 버전, 게임 버전(설정 맨 아래), 그리고 결제 문의라면 스토어 영수증의 <strong>주문 번호</strong>를 함께 적어 주세요. 주문 번호는 Apple·Google이 보낸 영수증 이메일이나 <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>(App Store), <a href="https://play.google.com/store/account/orderhistory">Google Play 주문 내역</a>에서 확인할 수 있습니다.</p>
 </div>
 
 <h2 id="progress-ko">진행 상황이 사라졌어요</h2>
@@ -54,12 +56,13 @@
 <ul>
   <li><strong>설정 › 구매 복원</strong>을 눌러 주세요. 구매할 때와 같은 Apple ID / Google 계정으로 로그인되어 있어야 합니다.</li>
   <li>광고 제거, 배달 패스, 탈것·헬멧 세트처럼 한 번 사는 상품은 복원됩니다. 모이·코인처럼 쓰면 없어지는 상품은 구매 즉시 지급되며 복원 대상이 아닙니다.</li>
-  <li>결제는 됐는데 지급되지 않았다면 게임을 완전히 껐다 켠 뒤 다시 확인하고, 그래도 없으면 문의용 ID와 주문 번호를 보내 주세요.</li>
+  <li>결제는 됐는데 지급되지 않았다면 게임을 완전히 껐다 켠 뒤 다시 확인하고, 그래도 없으면 스토어 영수증의 주문 번호를 이메일로 보내 주세요.</li>
   <li>"결제 승인 대기" 상태(보호자 승인 등)는 승인되면 자동으로 지급됩니다.</li>
 </ul>
 
 <h2 id="refunds-ko">환불하고 싶어요</h2>
-<p>결제와 환불은 각 스토어가 처리합니다. App Store: <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a> · Google Play: <a href="https://support.google.com/googleplay/answer/2479637">Google Play 환불 안내</a></p>
+<p>결제와 환불은 각 스토어가 자체 정책에 따라 처리하므로, 주문 번호를 확인한 뒤 해당 스토어에 요청해 주세요. App Store: <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a> · Google Play: <a href="https://support.google.com/googleplay/answer/2479637">Google Play 환불 안내</a></p>
+<p>도움이 필요하면 주문 번호와 함께 <a href="mailto:{{CONTACT_EMAIL}}?subject=%5B%EB%B0%95%EB%91%98%EA%B8%B0%5D%20%EB%AC%B8%EC%9D%98">이메일</a>로 알려 주세요. 운영자는 카드 번호 등 결제 정보를 받지 않으니 메일에 적지 마세요.</p>
 
 <h2 id="ads-ko">광고는 어떻게 나오나요?</h2>
 <ul>
@@ -78,7 +81,7 @@
 <p>오른쪽 페달은 가스, 왼쪽 페달은 브레이크입니다. 공중에서는 가스가 앞을 들고 브레이크가 앞을 숙입니다. 두 바퀴로 착지하면 짐이 덜 상하고, 결승선 뒤 ×5 칸에 멈추면 짐값이 5배가 됩니다. 접근성을 위해 설정에서 <strong>자동 적재</strong>를 켤 수 있습니다.</p>
 
 <h2 id="delete-ko">내 데이터를 삭제하고 싶어요</h2>
-<p>게임에는 계정이 없어 운영자가 보관하는 진행 데이터가 없습니다. 기기의 게임 데이터는 앱을 삭제하면 지워집니다. 결제 처리 업체(RevenueCat)에 남은 구매 기록의 삭제는 <a href="mailto:{{CONTACT_EMAIL}}?subject=%5B%EB%B0%95%EB%91%98%EA%B8%B0%5D%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%82%AD%EC%A0%9C%20%EC%9A%94%EC%B2%AD">이메일</a>로 문의용 ID(또는 스토어 주문 번호)와 함께 요청해 주세요. 운영자가 지체 없이 삭제하고 알려 드립니다. 자세한 내용은 <a href="privacy.html#retention-ko">개인정보 처리방침 6항</a>을 참고하세요.</p>
+<p>게임에는 계정이 없어 운영자가 보관하는 진행 데이터가 없고, 구매 기록을 보관하는 서버도 운영하지 않습니다. 기기의 게임 데이터는 앱을 삭제하면 지워집니다. 결제 내역은 Apple과 Google이 보관하며, 사본이나 삭제는 <a href="https://privacy.apple.com">Apple 데이터 및 개인정보 보호</a> 또는 <a href="https://myaccount.google.com/">Google 계정</a>에서 요청할 수 있습니다(Apple과 Google에서는 계정 자체를 삭제해야만 결제 내역이 삭제될 수 있습니다). 운영자에게 보낸 문의 메일의 삭제를 원하시면 <a href="mailto:{{CONTACT_EMAIL}}?subject=%5B%EB%B0%95%EB%91%98%EA%B8%B0%5D%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%82%AD%EC%A0%9C%20%EC%9A%94%EC%B2%AD">이메일</a>로 알려 주세요. 자세한 내용은 <a href="privacy.html#retention-ko">개인정보 처리방침 6항</a>을 참고하세요.</p>
 
 <h2 id="privacy-ko">개인정보</h2>
 <p><a href="privacy.html#ko">개인정보 처리방침</a>을 확인해 주세요.</p>
@@ -89,7 +92,7 @@
 <p class="meta">{{APP_NAME_EN}} ({{APP_NAME_KO}})</p>
 <div class="callout">
   <p><strong>Email: <a href="mailto:{{CONTACT_EMAIL}}?subject=%5B%EB%B0%95%EB%91%98%EA%B8%B0%5D%20Support">{{CONTACT_EMAIL}}</a></strong></p>
-  <p>To help us answer quickly, please include the <strong>Support ID</strong> from the Game's <strong>Settings › Purchases &amp; Support</strong>, your device model, OS version, the Game's version (bottom of Settings) and, for purchase issues, the order number from your store receipt.</p>
+  <p>To help us answer quickly, please include your device model, OS version, the Game's version (bottom of Settings) and, for purchase issues, the <strong>order number</strong> from your store receipt. You can find it in the receipt email from Apple or Google, at <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a> (App Store) or in your <a href="https://play.google.com/store/account/orderhistory">Google Play order history</a>.</p>
 </div>
 
 <h2 id="progress-en">My progress is gone</h2>
@@ -99,12 +102,13 @@
 <ul>
   <li>Tap <strong>Settings › Restore Purchases</strong> while signed in with the same Apple ID / Google account you bought with.</li>
   <li>One-time purchases (Remove Ads, Delivery Pass, vehicle and helmet bundles) are restored. Items that get used up, like Seeds and coins, are delivered at purchase time and are not restorable.</li>
-  <li>If you were charged but did not receive your item, fully close and reopen the Game. If it is still missing, email us your Support ID and order number.</li>
+  <li>If you were charged but did not receive your item, fully close and reopen the Game. If it is still missing, email us the order number from your store receipt.</li>
   <li>Purchases waiting for approval (for example "Ask to Buy") are delivered automatically once approved.</li>
 </ul>
 
 <h2 id="refunds-en">Refunds</h2>
-<p>Payments and refunds are handled by the stores. App Store: <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a> · Google Play: <a href="https://support.google.com/googleplay/answer/2479637">Google Play refund help</a></p>
+<p>Payments and refunds are handled by the stores under their own policies, so please request a refund from the store you bought from, with your order number. App Store: <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a> · Google Play: <a href="https://support.google.com/googleplay/answer/2479637">Google Play refund help</a></p>
+<p>If you need help, <a href="mailto:{{CONTACT_EMAIL}}?subject=%5B%EB%B0%95%EB%91%98%EA%B8%B0%5D%20Support">email us</a> the order number. We never receive card numbers or other payment details, so please do not include them.</p>
 
 <h2 id="ads-en">How do ads work?</h2>
 <ul>
@@ -123,7 +127,7 @@
 <p>The right pedal is gas and the left pedal is brake. In the air, gas tilts the nose up and brake tilts it down. Landing on both wheels protects your cargo, and stopping on the ×5 zone past the finish line pays five times. For accessibility you can turn on <strong>Auto-Load</strong> in Settings.</p>
 
 <h2 id="delete-en">Deleting your data</h2>
-<p>The Game has no accounts, so we hold no copy of your progress. Game data on your device is removed when you delete the app. To have purchase records held by our payment processor (RevenueCat) deleted, <a href="mailto:{{CONTACT_EMAIL}}?subject=%5B%EB%B0%95%EB%91%98%EA%B8%B0%5D%20Data%20deletion%20request">email us</a> your Support ID (or store order number). We will delete them without undue delay and confirm. See <a href="privacy.html#retention-en">section 6 of the Privacy Policy</a>.</p>
+<p>The Game has no accounts, so we hold no copy of your progress, and we run no server that stores purchase records. Game data on your device is removed when you delete the app. Purchase history is kept by Apple and Google; to get a copy of it or ask for it to be deleted, use <a href="https://privacy.apple.com">Apple's Data and Privacy page</a> or your <a href="https://myaccount.google.com/">Google Account</a> (Apple and Google may only delete it by deleting your account). To have emails you sent us deleted, <a href="mailto:{{CONTACT_EMAIL}}?subject=%5B%EB%B0%95%EB%91%98%EA%B8%B0%5D%20Data%20deletion%20request">email us</a>. See <a href="privacy.html#retention-en">section 6 of the Privacy Policy</a>.</p>
 
 <h2 id="privacy-en">Privacy</h2>
 <p>Please read our <a href="privacy.html#en">Privacy Policy</a>.</p>
