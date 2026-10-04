@@ -1,0 +1,14 @@
+{
+  "_comment": "Manual overrides for fill.mjs. Empty strings fall back to the account values in resultPath (park-dulgi-ops/result.json). Never put secrets here: everything in this repo is public.",
+  "resultPath": "../park-dulgi-ops/result.json",
+  "siteUrl": "https://sinhokang123.github.io/park-dulgi-site/",
+  "appNameKo": "박둘기: 과적 배달왕",
+  "appNameEn": "Park Dulgi: Overload Delivery",
+  "effectiveDate": "2026-10-04",
+  "contactEmail": "support@aboutusforyou.com",
+  "legalEntity": "AboutUsAgency, Inc.",
+  "privacyOfficer": "",
+  "publisherId": "",
+  "appStoreUrl": "",
+  "playStoreUrl": ""
+}

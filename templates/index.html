@@ -1,0 +1,114 @@
+<!doctype html>
+<!-- TEMPLATE: edit this file, then run `node fill.mjs` to regenerate ../index.html. Comments are stripped from output. -->
+<html lang="ko" data-title-ko="{{APP_NAME_KO}} — 비둘기 택배 기사의 과적 물리 레이싱" data-title-en="{{APP_NAME_EN}} — Delivery Chaos on Tiny Wheels">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{APP_NAME_KO}} · {{APP_NAME_EN}}</title>
+<meta name="description" content="냉장고, 피아노, 웨딩 케이크를 스쿠터 한 대에. A deadpan pigeon courier stacks absurd cargo onto tiny vehicles and rides physics-driven roads.">
+<link rel="canonical" href="{{SITE_URL}}">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{APP_NAME_KO}} · {{APP_NAME_EN}}">
+<meta property="og:description" content="냉장고, 피아노, 웨딩 케이크를 스쿠터 한 대에. Stack it, ride it, crash it.">
+<meta property="og:url" content="{{SITE_URL}}">
+<meta property="og:image" content="{{SITE_URL}}assets/icon-512.png">
+<meta name="theme-color" content="#f2c464">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preload" href="assets/fonts/jua-subset.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/site.css">
+<script>(function(){var d=document.documentElement,m=/(?:^|-)(ko|en)$/.exec(location.hash.slice(1)),l=m&&m[1];if(!l){try{l=localStorage.getItem('pd-lang')}catch(e){}}if(l!=='ko'&&l!=='en')l=/^ko\b/i.test(navigator.language||'')?'ko':'en';d.setAttribute('data-lang',l);d.lang=l;var t=d.getAttribute('data-title-'+l);if(t)document.title=t;})();</script>
+<script src="assets/site.js" defer></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="./" data-keep-lang><img src="assets/icon-192.png" alt="" width="40" height="40"><span class="brand-name">박둘기</span></a>
+    <nav class="site-nav" aria-label="Site">
+      <a href="./" aria-current="page" data-keep-lang><span class="ko">홈</span><span class="en">Home</span></a>
+      <a href="support.html" data-keep-lang><span class="ko">고객 지원</span><span class="en">Support</span></a>
+      <a href="privacy.html" data-keep-lang><span class="ko">개인정보 처리방침</span><span class="en">Privacy</span></a>
+    </nav>
+    <div class="lang-toggle" role="group" aria-label="Language / 언어">
+      <button type="button" data-set-lang="ko" lang="ko" aria-pressed="false">한국어</button>
+      <button type="button" data-set-lang="en" lang="en" aria-pressed="false">English</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <img class="hero-icon" src="assets/icon-400.jpg" alt="" width="200" height="200">
+      <div>
+        <div class="ko" lang="ko">
+          <h1>{{APP_NAME_KO}}</h1>
+          <p class="tagline">비둘기 택배 기사의 과적 물리 레이싱</p>
+          <p class="pitch">냉장고, 피아노, 3단 웨딩 케이크를 스쿠터 한 대에 싣는다고요? 무표정한 비둘기 택배 기사 둘기와 함께 짐을 높이 쌓고, 언덕과 계단을 넘어, 넘어지지 않고 배달해 보세요. 넘어지면… 심사단이 웃습니다.</p>
+        </div>
+        <div class="en" lang="en">
+          <p class="alt-name">{{APP_NAME_KO}}</p>
+          <h1>{{APP_NAME_EN}}</h1>
+          <p class="tagline">Delivery Chaos on Tiny Wheels</p>
+          <p class="pitch">A fridge, a piano and a three-tier wedding cake. On one scooter. Sure. Stack absurd cargo with Dulgi, a deadpan pigeon courier, ride physics-driven roads, and try to deliver it in one piece. Crash, and the jury laughs.</p>
+        </div>
+        <div class="stores">
+          {{BADGE_APP_STORE}}
+          {{BADGE_GOOGLE_PLAY}}
+        </div>
+        <p class="fine"><span class="ko" lang="ko">무료 · 광고와 인앱 결제가 포함되어 있습니다</span><span class="en" lang="en">Free to play · Contains ads and in-app purchases</span></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="features" aria-label="Features">
+    <div class="wrap">
+      <ul>
+        <li class="feature">
+          <span class="tag">STACK</span>
+          <h2><span class="ko" lang="ko">쌓고</span><span class="en" lang="en">Stack it</span></h2>
+          <p class="ko" lang="ko">흔들리는 크레인 고리에서 짐을 톡 떨어뜨려 쌓아요. 높이 쌓을수록 짐값이 올라가요.</p>
+          <p class="en" lang="en">Tap to drop each item while the crane hook swings. The taller the tower, the more it pays.</p>
+        </li>
+        <li class="feature">
+          <span class="tag">RIDE</span>
+          <h2><span class="ko" lang="ko">달리고</span><span class="en" lang="en">Ride it</span></h2>
+          <p class="ko" lang="ko">오른쪽은 가스, 왼쪽은 브레이크. 언덕, 계단, 점프대를 진짜 물리로 넘어가요.</p>
+          <p class="en" lang="en">Right pedal for gas, left for brake. Hills, stairs and ramps all push back with real physics.</p>
+        </li>
+        <li class="feature">
+          <span class="tag">CRASH</span>
+          <h2><span class="ko" lang="ko">넘어지고</span><span class="en" lang="en">Crash it</span></h2>
+          <p class="ko" lang="ko">넘어져도 재미있어요. 둘기가 슬로 모션으로 날아가고 과적 심사단이 "0.0" 팻말을 듭니다.</p>
+          <p class="en" lang="en">Failing is half the fun: Dulgi flies off in slow motion and the Overload Jury holds up a "0.0" sign.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="help" aria-label="Help">
+    <div class="wrap help-grid">
+      <a class="help-card" href="support.html" data-keep-lang>
+        <h2><span class="ko" lang="ko">고객 지원</span><span class="en" lang="en">Support</span></h2>
+        <p class="ko" lang="ko">구매 복원, 환불, 광고, 진행 상황 문의 <span class="go">→</span></p>
+        <p class="en" lang="en">Restoring purchases, refunds, ads and progress <span class="go">→</span></p>
+      </a>
+      <a class="help-card" href="privacy.html" data-keep-lang>
+        <h2><span class="ko" lang="ko">개인정보 처리방침</span><span class="en" lang="en">Privacy Policy</span></h2>
+        <p class="ko" lang="ko">계정 없음 · 진행 상황은 기기에만 저장 · 광고·결제 처리 업체 안내 <span class="go">→</span></p>
+        <p class="en" lang="en">No account · progress stays on your device · ad and payment providers <span class="go">→</span></p>
+      </a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span class="copy">© {{YEAR}} {{LEGAL_ENTITY}}</span>
+    <a href="mailto:{{CONTACT_EMAIL}}">{{CONTACT_EMAIL}}</a>
+    <a href="support.html" data-keep-lang><span class="ko">고객 지원</span><span class="en">Support</span></a>
+    <a href="privacy.html" data-keep-lang><span class="ko">개인정보 처리방침</span><span class="en">Privacy</span></a>
+  </div>
+</footer>
+</body>
+</html>
